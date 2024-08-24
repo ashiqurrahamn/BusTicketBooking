@@ -1,0 +1,62 @@
+
+.box{
+    border: 3px solid #fff;
+    border: crimson;
+}
+body{
+    background-image: url('/assets/images/T4.jpg');
+    background-size: 1550px;
+    width: 1505px;
+    height: 1300px;
+}
+select{
+    width:80%;
+    padding:10px 0;
+    font-size:16px;
+    color:rgb(206, 24, 24);
+    margin-bottom: 20px;
+    border:black;
+    border-bottom: 1px solid rgb(34, 1, 1);
+}
+small{
+    color: rgb(248, 6, 6);
+    font-size: 20px;
+}
+input{
+    width:80%;
+    padding:10px 0;
+    font-size:16px;
+    color:rgb(206, 24, 24);
+    margin-bottom: 20px;
+    border:black;
+    border-bottom: 1px solid rgb(34, 1, 1);
+}
+label{
+    color: wheat;
+    font-size: 25px;
+}
+h1
+{
+    align-items: center;
+    font-size: 40px;
+    color:white;
+    margin-left: 560px;
+}
+
+.myclass1{
+    width: 40%;
+    margin-left: 500px;
+}  
+
+button
+{
+        background-color: #0f0e0d; 
+        color: rgb(252, 247, 247);
+        padding: 15px 32px;
+       
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        position: absolute;
+      
+}

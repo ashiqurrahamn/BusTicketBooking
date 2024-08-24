@@ -1,0 +1,12 @@
+.jumbotron{
+    background-image: url('/assets/images/T1');
+    background-size: cover;
+    background-position: center center;
+    height: 70vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.jumbotron{
+    background-color: rgb(182, 196, 191);
+
+}

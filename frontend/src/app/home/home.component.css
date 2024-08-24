@@ -1,0 +1,11 @@
+
+.hero {
+    background-image: url('/assets/images/newbus.jpg') !important;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+  }
+
+
+
+

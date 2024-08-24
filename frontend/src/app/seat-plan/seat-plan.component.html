@@ -1,0 +1,21 @@
+<div class="bus">
+    <div class="select">
+        <h1> Please select your seat</h1>
+    </div>
+    <div class="exit"></div>
+    <ol>
+        <li *ngFor="let seatKey of getSeatKeys()">
+            <ol class="seats">
+                <li [class]="seat.availableSeats ? 'seat' : 'booked'" *ngFor="let seat of seatData[seatKey]">
+                    <input type="checkbox" [id]="seat.id" (change)="toggleSeat(seat.id)"
+                        [checked]="selectedSeats[seat.id]" [disabled]="!seat.availableSeats"/>
+                    <label [for]="seat.id">{{seat.seatNumber}}</label>
+                </li>
+            </ol>
+        </li>
+    </ol>
+     
+    <div class="payment">
+        <button routerLink="/payment" (click)="makePayment()">Make Payment</button>
+    </div>
+</div>

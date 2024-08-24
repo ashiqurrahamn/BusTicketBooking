@@ -1,0 +1,41 @@
+<div class="jumbotron">
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-md-8"></div>
+  
+        <div class="col-md-4 border">
+          <form (ngSubmit)="updateRoutes()">
+              <legend>Routes Information</legend>
+          
+              <div class="form-group">
+                <label for="source">Source City</label>
+                <input [(ngModel)]="routes.source" type="text" class="form-control" id="source" name="source">
+              </div>
+            
+              <div class="form-group">
+                <select name="sourceState" id="sourceState" [(ngModel)]="routes.sourceState">
+                    <option *ngFor="let item of states" value="{{item.name}}">{{item.name}}</option>
+                </select>
+              </div>
+  
+              <div class="form-group">
+                <label for="source">Destination City</label>
+                <input [(ngModel)]="routes.destination" type="text" class="form-control" id="destination" name="destination">
+              </div>
+  
+              <div class="form-group">
+                <select name="destinationState" id="destinationState" [(ngModel)]="routes.destinationState">
+                    <option *ngFor="let item of states" value="{{item.name}}">{{item.name}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Update Routes</button>
+                <button type="button" class="btn btn-secondary" style="float: right;" (click)="backHome()">Back to Home</button>
+              </div>
+              <div><span class="label label-danger">{{message}}</span></div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>

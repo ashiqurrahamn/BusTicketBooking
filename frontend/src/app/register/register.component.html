@@ -1,0 +1,77 @@
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+      
+  <div class="col-md-4"></div>
+  <div class="col-md-4 border">
+   <form #userForm="ngForm" (ngSubmit)="addUser(userForm)">
+      <legend>Register</legend>
+          <div class="form-group">
+              <label for="Name">Name</label>
+              <input required="required" ngModel type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+              <label for="Email">Email</label>
+              <input required="required" ngModel type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+          </div>
+      
+          <label for="SEX">Sex</label>
+          <div class="row">
+              <div class="col-md-4">
+          <div class="form-check">
+              <input ngModel required="required" class="form-check-input" type="radio" name="sex" id="sexMale" value="MALE" checked="checked">
+              <label class="form-check-label" for="exampleRadios1">
+                  Male
+              </label>
+          </div>
+      </div>
+          <div class="col-md-4">
+          <div class="form-check">
+              <input ngModel class="form-check-input" type="radio" name="sex" id="sexFemale" value="FEMALE">
+              <label class="form-check-label" for="exampleRadios2">
+                  Female
+              </label>
+          </div>
+      </div>
+          <div class="col-md-4">
+          <div class="form-check">
+              <input ngModel class="form-check-input" type="radio" name="sex" id="sexOther" value="OTHER">
+              <label class="form-check-label" for="exampleRadios1">
+                  Other
+              </label>
+          </div>
+      </div>
+      </div>
+      <div class="form-group">
+              <label for="Mobile">Mobile No</label>
+              <input required="required" ngModel type="text" class="form-control" id="phone" name="phone" placeholder="Enter Mobile No">
+      </div>
+      <div class="form-group">
+              <label for="Password">Password</label>
+              <input required="required" ngModel type="password" class="form-control" id="password" name="password"
+                  placeholder="Enter Password">
+      </div>
+      <div class="form-group">
+              <label for="City">City</label>
+              <input required="required" ngModel type="text" class="form-control" id="city" name="city" placeholder="Enter City Name">
+      </div>
+      <div class="form-group">
+          <select name="state" id="state" [(ngModel)]="state">
+              <option disabled="disabled">Select State</option>
+              <option *ngFor="let item of state" [value]="item.name">{{item.name}}</option>
+          </select>
+      </div>
+      <div class="form-group">
+              <label for="Pincode">Pincode</label>
+              <input required="required" ngModel type="number" class="form-control" id="pin" name="pin" placeholder="Enter Pincode">
+      </div>
+      <div class="form-group">
+          <button type="submit" class="btn btn-success">Register</button>
+          <a routerLink="/home" style="float: right;" class="btn btn-danger">GO TO HOME</a>
+      </div>
+      <div><span class="label label-danger">{{message}}</span></div>
+  </form>
+      </div>
+  </div>
+</div>
+</div>

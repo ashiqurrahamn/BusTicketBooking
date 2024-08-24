@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-1">
+        <span class="label label-danger">{{message}}</span>
+    </div>
+
+    <div class="panel panel-default col-md-10">
+        <div class="table-responsive">
+            <table class="table table-hover table-dark">
+                <thead style="color: black;" class="table-light">
+                    <tr>
+                        <th scope="col">Bus Type</th>
+                        <th scope="col">Capacity</th>
+                        <th scope="col">Arrival Time</th>
+                        <th scope="col">Dest. Time</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Runs On</th>
+                        <th scope="col">Available Seats</th>
+                        <th scope="col">Book</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of bus">
+                        <td>{{item.type}}</td>
+                        <td>{{item.capacity}}</td>
+                        <td>{{item.arrivalDate}}</td>
+                        <td>{{item.destinationDate}}</td>
+                        <td>{{item.price}}</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <span *ngIf="item.frequency?.sun">S </span>
+                                        <span *ngIf="item.frequency?.mon">M </span>
+                                        <span *ngIf="item.frequency?.tues">T </span>
+                                        <span *ngIf="item.frequency?.wed">W </span>
+                                        <span *ngIf="item.frequency?.thus">T </span>
+                                        <span *ngIf="item.frequency?.fri">F </span>
+                                        <span *ngIf="item.frequency?.sat">S </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <input type="button" (click)="checkAvailableSeats(item.id)" value="CHECK AVAILABILITY"><br>
+                            <div>
+                               <h1> <span class="label label-danger">{{seats?.availableSeats}} Available Seats</span></h1>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="button" (click)="onSelectBus(item)" value="Book Seat">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-1">
+
+    </div>
+</div>

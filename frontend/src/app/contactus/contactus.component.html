@@ -1,0 +1,60 @@
+<div class="form-wrap contact-us-block">
+    <div class="form-box clearfix">
+        <form action="https://www.shohoz.com/contact-us" method="POST" id="form_contact_us">
+            <div class="">
+                <label>Purpose</label>
+                <div class="select-style">
+                    <select name="purpose" id="purpose">
+                        <!-- <option value="ride" >Ride</option> -->
+                        <!-- <option value="food" >Food</option> -->
+                        <option value="bus">Bus</option>
+                        <option value="launch">Launch</option>
+                        <option value="event">Event</option>
+                        <option value="movie">Movie</option>
+                        <!-- <option value="truck" >Truck</option> -->
+                    </select>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-half  ">
+                    <label>Your Name<span>*</span></label>
+                    <input type="text" name="name" id="name" value="" placeholder="Mahmud">
+                    <p class="help-block" style="display: none;"></p>
+                </div>
+                <div class="col-half  ">
+                    <label>Your City<span>*</span></label>
+                    <div class="select-style">
+                        <select name="city" id="city">
+                            <option value="Dhaka">Dhaka</option>
+                        </select>
+                    </div>
+                    <p class="help-block" style="display: none;"></p>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-half  ">
+                    <label>Phone Number<span>*</span></label>
+                    <input type="text" name="contactnumber" id="contactnumber" value="" placeholder="">
+                    <p class="help-block" style="display: none;"></p>
+                </div>
+                <div class="col-half  ">
+                    <label>Email<span>*</span></label>
+                    <input type="email" name="email" id="email" value="" placeholder="">
+                    <p class="help-block" style="display: none;"></p>
+                </div>
+            </div>
+            <div class="col-full">
+                <label>Message<span>*</span></label>
+                <textarea name="comment" id="comment" placeholder=""></textarea>
+                <p class="help-block" style="display: none;"></p>
+            </div>
+            <input type="hidden" name="recaptcha_response" id="g-recaptcha"
+                value="03AFcWeA4uS_BYnPmHxjaGYLw-mmIv3Pyd4GVrIKORm4kfBWMuElN9_yC_tKtdY7mNotyI-uYW_Ty6qO2iCzsCbCNYOmClCJ6NJNUPHaeItuMcg8Zgrmeq1M4lNBPjUjES1jiL8eFNy9V_y9F7xbxHFvksJDPoPENI597_B8Rdd7fJfVHPJZHlrNpP1cs_K7dhv7hz9YooWgYioZPejPQYmIAeSWicLJ5oqkmtFEncQCQfzlVR_rmJ8rOdI15er7RLXZSi2LmYfpNIZaeOkRKmRMeR53_EecW7seUk1B65xt80zuoRuSZ_dyNbzBkQ0eW5c5gwuv4Hyg0pu7D9Hg5dMIotwsJmFvl3T7uNAxHeTX-0p-P5uWehMOJbPntesWSVbpJcU0FsXdgGBJ8W5uznJlXluCkbqCFytLJRVhFBprhd8jf0tSkl4P6pHWpIKejkwJvriZZrReAt383llTOFNrUSysbsPTly3ACS0SjZxiFYhuGZ2ew0e_t0v9m37jfOW0fq7bMbgt5jWRdOhJmhcM7B0d411VoN4wuhU8uaFEATffS6pzEj3J_LBrL671dMLBt5KW2BWWfTbyI_41MjEcdqV7oDlZpJnlY57xY2qLkMpACjq6gtU9-8WlgA0l5HMjuaRrn5hf3akOy7vBbeOEqecuMY9MUzP-DDyS2OQVjlziJ7JQ1TmQY">
+            <div class="submit-btn" style="margin-top: 40px;">
+                <input class="btn single-line" type="submit" value="send">
+            </div>
+
+            <p class="text-center" id="response_message"></p>
+        </form>
+    </div>
+</div>

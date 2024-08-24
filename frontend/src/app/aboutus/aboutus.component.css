@@ -1,0 +1,28 @@
+body {
+    font-family: "Bw Helder", Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #333333;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+  
+  .site-wrapper {
+    max-width: 1150px;
+    margin: auto;
+  }
+  
+  .clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+  
+
+
+  

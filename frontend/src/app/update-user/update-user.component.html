@@ -1,0 +1,45 @@
+<div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8"></div>
+   <div class="col-md-4 border">
+    <form (ngSubmit)="update()">
+        <legend>Update User</legend>
+        <div class="form-group">
+                <label for="Name">Name</label>
+                <input required="required" [(ngModel)]="user.name" type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+            </div>
+        <div class="form-group">
+                <label for="Email">Email</label>
+                <input disabled="disabled" [(ngModel)]="user.email" type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
+            </div>
+        <div class="form-group">
+                <label for="Mobile">Mobile No</label>
+                <input required="required" [(ngModel)]="user.phone" type="text" class="form-control" id="phone" name="phone" placeholder="Enter Mobile No">
+            </div>
+        <div class="form-group">
+                <label for="City">City</label>
+                <input required="required" [(ngModel)]="user.city" type="text" class="form-control" id="city" name="city" placeholder="Enter City Name">
+            </div>
+        <div class="form-group">
+            <select required="required" name="state" id="state" [(ngModel)]="user.state">
+                <option  disabled="disabled">Select State</option>
+                <option *ngFor="let item of states" value="{{item.name}}">{{item.name}}</option>
+            </select>
+        </div>
+       <div class="form-group">
+                <label for="Pincode">Pincode</label>
+                <input required="required" [(ngModel)]="user.pin" type="number" class="form-control" id="pin" name="pin" placeholder="Enter Pincode">
+            </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Update</button>
+            <a routerLink="/home" style="float: right;" class="btn btn-dark">GO TO HOME</a>
+        </div>
+        <div>
+            <span class="label label-danger">{{message}}</span>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>

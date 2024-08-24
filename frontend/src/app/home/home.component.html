@@ -1,0 +1,37 @@
+<!-- <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head> -->
+<section class="hero is-info is-fullheight is-bold">
+  <div class="hero-body">
+      <div class="col-md-4"></div>
+      <div class="row justify-content-center pb-5 pt-3">
+          <div class="col-md-4 block mt-3">
+              <form (ngSubmit)="searchBus()" style="padding-top: 100px;">
+                  <div class="row">
+                      <div class="form-group col-md-6">
+                          <label>Leaving from</label>
+                          <input required="required" [(ngModel)]="source" type="text" class="form-control" id="source" name="source" placeholder="Enter City">
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label>Going To</label>
+                          <input required="required" [(ngModel)]="destination" type="text" class="form-control" id="destination" name="destination" placeholder="Enter City">
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="form-group col-md-12">
+                          <label>Journey Date</label>
+                          <input type="date" required="required" class="form-control form-control-sm" [(ngModel)]="date"
+                              name="date">
+                      </div>
+                  </div>
+                  <button class="btn btn-light btn-block mt-3 btn-search btn-sm">Search Buses</button>
+                  <span class="label label-danger">{{message}}</span>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>

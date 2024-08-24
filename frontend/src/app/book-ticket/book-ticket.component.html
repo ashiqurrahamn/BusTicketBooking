@@ -1,0 +1,52 @@
+<div class="jumbotron">
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 border">
+             <form #bookTicket="ngForm" (ngSubmit)="addTicket(bookTicket)">
+
+                <div class="form-group">
+                    <label for="OwnerName">Owner Name</label>
+                    <input ngModel name="ownerName" type="text" class="form-control" id="ownerName"
+                        placeholder="Enter Owner Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="ownerPhoneNo">Owner Phone</label>
+                    <input ngModel name="ownerPhoneNo" type="text" class="form-control" id="ownerPhone"
+                        placeholder="Enter Phone No.">
+                </div>
+
+                <div class="form-group">
+                    <label for="noOfSeats">No. Of Seats</label>
+                    <input [(ngModel)]="noOfSeats" name="noOfSeats" type="number" class="form-control" id="noOfSeats">
+                </div>
+
+                <div class="form-group">
+                    <label for="fare">Ticket Price</label>
+                    <input disabled="disabled" value={{noOfSeats*busPrice}} type="text" class="form-control" id="fare">
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentMode">Payment Mode</label>
+                    <select ngModel class="form-control" name="paymentMode" id="paymentMode">
+                        <option>CREDIT_CARD</option>
+                        <option>DEBIT_CARD</option>
+                        <option>Nagad</option>
+                        <option>Bkash</option>
+                        <option>CASH</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="button"   class="btn btn-primary">Book Ticket</button>
+
+                    <button type="button" (click)="backHome()" style="float: right;" class="btn btn-dark">Back To Home</button>
+                </div>
+                <div>
+                    <span class="label label-danger">{{message}}</span>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>

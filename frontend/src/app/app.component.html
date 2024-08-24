@@ -1,0 +1,27 @@
+<div class="navbar-default navbar-fixed-top">
+    <a *ngIf="adminService.isAdminLoggedIn() || userService.isLoggedIn()" routerLink="/home">Home</a>
+    <a *ngIf="adminService.isAdminLoggedIn()" routerLink="/admin">Routes</a>
+    <a *ngIf="adminService.isAdminLoggedIn()" routerLink="/addRoutes">Add Route</a>
+    <a *ngIf="adminService.isAdminLoggedIn()" routerLink="/updateAdminPassword">Change Password</a>
+    <a *ngIf="adminService.isAdminLoggedIn()" routerLink="/updateAdmin">Update Profile</a>
+
+
+    <a *ngIf="userService.isLoggedIn()" routerLink="/myBooking">My Booking</a>
+    <a *ngIf="userService.isLoggedIn()" routerLink="/updateUserPassword">Change Password</a>
+    <a *ngIf="userService.isLoggedIn()" routerLink="/updateUser">Update Profile</a>
+
+
+    <div class="topnav-right">
+        <li *ngIf="!userService.isLoggedIn()  && !adminService.isAdminLoggedIn()">
+            <a class="btn btn-dark" routerLink="/home">Home</a>
+            <a class="btn btn-dark" routerLink="/login">Login</a>
+            <a class="btn btn-dark" routerLink="/register">Register</a>
+        </li>
+        <li *ngIf="(userService.isLoggedIn() || adminService.isAdminLoggedIn())">
+            <button type="button" class="btn btn-warning" style="margin-top: 10px;" (click)="userService.logOut()">Logout</button>
+        </li>
+    </div>
+
+</div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

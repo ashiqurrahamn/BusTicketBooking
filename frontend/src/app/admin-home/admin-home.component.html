@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default col-md-12">
+            <span class="label label-danger">{{message}}</span>
+                <div class="table-responsive">
+                    <table class="table table-hover table-dark">
+                            <tr>
+                                <th scope="col">Source City</th>
+                                <th scope="col">Source State</th>
+                                <th scope="col">Destination City</th>
+                                <th scope="col">Destination State</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                                <th scope="col">Add Bus</th>
+                            </tr>
+                        
+                        <tbody>
+                            <tr *ngFor="let item of routes">
+                                <td>{{item.source}}</td>
+                                <td>{{item.sourceState}}</td>
+                                <td>{{item.destination}}</td>
+                                <td>{{item.destinationState}}</td>
+                                <td><a routerLink="/editRoutes/{{item.id}}">Edit</a></td>
+                                <td><a routerLink="/deleteRoutes/{{item.id}}">Delete</a></td>
+                                <td><a routerLink="/addBus/{{item.id}}">AddBus</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+</div>

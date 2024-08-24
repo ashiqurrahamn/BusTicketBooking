@@ -1,0 +1,105 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4 border">  
+                <form (ngSubmit)="updateBus()">
+    
+                    <div class="form-group">
+                        <label for="busNo">Bus No</label>
+                        <input [(ngModel)]="bus.busNo" disabled="disabled" name="busNo" type="text" class="form-control" id="busNo"
+                            aria-describedby="busNoHelp" placeholder="Enter Bus No">
+                        <small id="busNoHelp" class="form-text text-muted">Example : MH 04 BG 1121</small>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="capacity">Capacity</label>
+                        <input [(ngModel)]="bus.capacity" name="capacity" type="number" class="form-control" id="capacity"
+                            aria-describedby="capacityHelp" placeholder="Seats/Capacity">
+                        <small id="capacityHelp" class="form-text text-muted">Seats/Capacity in the Bus</small>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="busType">Bus Type</label>
+                        <select class="form-control" name="type" id="type" [(ngModel)]="bus.type">
+                            <option>SEATER_AC</option>
+                            <option>SEATER_NON_AC</option>
+                            <option>SLEEPER_AC</option>
+                            <option>SLEEPER_NON_AC</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="arrivalTime">Arrival Time</label>
+                        <input [(ngModel)]="bus.arrival" name="arrival" type="time" class="form-control" id="arrivalTime"
+                            aria-describedby="arrivalTimeHelp" placeholder="Enter Arrival Time">
+                        <small id="arrivalTimeHelp" class="form-text text-muted">Time of Arrival of Bus</small>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="destinationTime">Destination Time</label>
+                        <input [(ngModel)]="bus.destination" name="destination" type="time" class="form-control" id="destinationTime"
+                            aria-describedby="destinationTimeHelp" placeholder="Enter Destination Time">
+                        <small id="destinationTimeHelp" class="form-text text-muted">Time of reaching Destination of
+                            Bus</small>
+                    </div>
+    
+                    <label for="runningDays">
+                        <h5>Select Running Days</h5>
+                    </label>
+                    <br>
+                    <div class="form-check form-check-inline">
+                    
+                        <input [(ngModel)]="bus.frequency.sun" name="frequency.sun" class="form-check-input" type="checkbox" id="sunday"
+                            value="true">
+                        <label class="form-check-label" for="sunday">SUN</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input [(ngModel)]="bus.frequency.mon" name="frequency.mon" class="form-check-input" type="checkbox" id="monday"
+                            value="true">
+                        <label class="form-check-label" for="monday">MON</label>
+                    </div>
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input [(ngModel)]="bus.frequency.tues" name="frequency.tues" class="form-check-input" type="checkbox" id="tuesday"
+                            value="true">
+                        <label class="form-check-label" for="tuesday">TUES</label>&nbsp;&nbsp;
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input [(ngModel)]="bus.frequency.wed" name="frequency.wed" class="form-check-input" type="checkbox" id="wednesday"
+                            value="true">
+                        <label class="form-check-label" for="wednesday">WED</label>
+                    </div>
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input [(ngModel)]="bus.frequency.thurs" name="frequency.thurs" class="form-check-input" type="checkbox" id="thursday"
+                            value="true">
+                        <label class="form-check-label" for="thursday">THURS</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input [(ngModel)]="bus.frequency.fri" name="frequency.fri" class="form-check-input" type="checkbox" id="friday"
+                            value="true">
+                        <label class="form-check-label" for="friday">FRI</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input [(ngModel)]="bus.frequency.sat" name="frequency.sat" class="form-check-input" type="checkbox" id="saturday"
+                            value="true">
+                        <label class="form-check-label" for="saturday">SAT</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="busPrice">Ticket Price</label>
+                        <input [(ngModel)]="bus.price" name="bus.price" type="text" class="form-control" id="price"
+                            aria-describedby="priceHelp" placeholder="Ticket Price">
+                        <small id="priceHelp" class="form-text text-muted">Enter Price of One Ticket</small>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Update Bus</button>
+    
+                        <button type="button" (click)="backListBus()" style="float: right;" class="btn btn-primary">Back To Bus List</button>
+                    </div>
+                    <div><span class="label label-danger">{{message}}</span></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>

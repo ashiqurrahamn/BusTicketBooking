@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background: black;
+}
+
+.bus {
+
+    background: white;
+    margin: 5px auto;
+    max-width: 250px;  
+    height: 600px;
+
+}
+.select {
+   
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+.select h1 {
+   width: 70%;
+   margin: 40px auto 35px auto; 
+}
+.exit {
+    position: relative;
+    height: 50px;  
+}
+.exit:before {
+    content: 'EXIT ';
+    font-size: 10px;
+    line-height: 18px;
+    display: block;
+    padding: 0px 2px 2px 2px;   
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background:red;
+    color: white;
+    border-radius:  5px;
+
+}
+.exit:before {
+    left: 10px;
+    
+}
+
+ol {   
+    list-style: none;
+    padding: 0;
+    margin: 8px ;  
+}
+.seats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.seat {
+    display: block;
+    width: 200px;
+    height: 15px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.seat{
+    display: flex;
+    flex: 0 0 14.28%;
+    padding: relative;
+}
+
+.seat label {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 1.9rem;
+    padding: 6px 0;
+    background: #5bfc60;
+    border-radius: 5px;
+    color: black;
+
+   
+}
+.seat label:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0px 2px green;
+    
+}
+.booked {
+    display: block;
+    width: 200px;
+    height: 15px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.booked{
+    display: flex;
+    flex: 0 0 14.28%;
+    padding: relative;
+}
+
+.booked label {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 1.9rem;
+    padding: 6px 0;
+    background:gray;
+    border-radius: 5px;
+    color: black;
+
+   
+}
+.booked label:hover {
+    cursor: text;    
+}
+.seat input[type=checkbox] {
+    position: absolute;
+ 
+}
+.seat input[type=checkbox]:checked + label {
+    background: red; 
+}
+.seat:nth-child(2){
+    margin-right: 20%;
+}
+.booked input[type=checkbox] {
+    position: absolute;
+ 
+}
+.booked input[type=checkbox]:checked + label {
+    background: red; 
+}
+.booked:nth-child(2){
+    margin-right: 20%;
+}
+.payment {
+    text-align: center;
+    margin-top: 20px;
+    
+
+}
